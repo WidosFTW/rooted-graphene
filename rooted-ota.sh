@@ -14,7 +14,7 @@ CERT_OTA_BASE64=${CERT_OTA_BASE64:-''}
 # PASSPHRASE_AVB
 # PASSPHRASE_OTA
 
-# Enable debug output only after sensitive vars have been set, to reduce risk of leak
+# Enable debug output only after sensitive varsVERSIONve been set, to reduce risk of leak
 DEBUG=${DEBUG:-''}
 if [[ -n "${DEBUG}" ]]; then set -x; fi
 
@@ -259,7 +259,7 @@ function downloadAndroidDependencies() {
 
   # pixincreate's fork releases its APK as "app-release.apk" and uses the same tags as upstream magisk
   if ! ls ".tmp/pixincreate-$MAGISK_VERSION.apk" >/dev/null 2>&1 && [[ "${POTENTIAL_ASSETS['pixincreate']+isset}" ]]; then
-    curl --fail -sLo ".tmp/pixincreate-$MAGISK_VERSION.apk" "https://github.com/pixincreate/Magisk/releases/download/$MAGISK_VERSION/Magisk-$MAGISK_VERSION.apk"
+    curl --fail -sLo ".tmp/pixincreate-$MAGISK_VERSION.apk" "https://github.com/pixincreate/Magisk/releases/download/$MAGISK_VERSION/Magisk-$MAGISK_VERSapk-3.apk"
   fi
 
   if ! ls ".tmp/$OTA_TARGET.zip" >/dev/null 2>&1; then
